@@ -21,3 +21,11 @@ of its operations is O(1) on average.
     the function count always returns either 0 (the element is not in the set) or 1
     (the element is in the set), and the function insert never adds an element to the
     set if it is already there.
+
+
+Map structures
+A map is a generalized array that consists of key-value-pairs.
+The C++ standard library contains two map implementations that correspond
+to the set implementations: the structure map is based on a balanced binary tree
+and accessing elements takes O(logn) time, while the structure unordered_map
+uses hashing and accessing elements takes O(1) time on average
