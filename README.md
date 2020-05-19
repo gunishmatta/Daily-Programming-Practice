@@ -52,4 +52,25 @@ whose value is at least x, and the function upper_bound(x) returns an iterator
 to the smallest element whose value is larger than x. If such elements do not
 exist, the return value of the functions will be end. These functions are not
 supported by the unordered_set structure which does not maintain the order of
-the elements
+the elements.
+
+
+
+
+Priority queues
+A priority_queue maintains a set of elements. The supported operations are
+insertion and, depending on the type of the queue, retrieval and removal of either
+the minimum or maximum element. The time complexity is O(logn) for insertion
+and removal and O(1) for retrieval.
+While an ordered set efficiently supports all the operations of a priority queue,
+the benefit in using a priority queue is that it has smaller constant factors.
+A priority queue is usually implemented using a heap structure that is much
+simpler than a balanced binary tree needed for an ordered set.
+By default, the elements in the C++ priority queue are sorted in decreasing
+order, and it is possible to find and remove the largest element in the queue. 
+
+Using the following declaration, we can create a priority queue that allows us
+to find and remove the minimum element:
+priority_queue<int,vector<int>,greater<int>> q;
+
+
