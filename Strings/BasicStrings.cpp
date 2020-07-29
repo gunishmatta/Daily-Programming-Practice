@@ -1,14 +1,17 @@
 #include<iostream>
 using namespace std;
+
+
+
 int main() {
   /* code */
+char str[10];
 
-char str[7] ="Gunish";
+cin.get(str,10);
 
-for (int i = 0; i < sizeof(str); i++) {
-  /* code */
-  cout<<str[i]<<endl;
-}
+cout<<str<<endl;
+
+
 
 
   return 0;
