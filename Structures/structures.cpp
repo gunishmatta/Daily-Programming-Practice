@@ -20,6 +20,6 @@ std::cout << "Enter age" << '\n';
   std::cout << "Enter salary" << '\n';
 cin>>p1.salary;
 
-std::cout <<p1.name<<p1.age<<p1.salary<< '\n';
+std::cout <<p1.name<<endl<<p1.age<<endl<<p1.salary<< '\n';
   return 0;
 }

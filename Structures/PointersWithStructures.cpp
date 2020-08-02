@@ -18,6 +18,6 @@ cin>>(*ptr).inch;
 
 std::cout << "Distance = " << '\n';
 std::cout <<(*ptr).feet<<"Feet"<< '\n';
-std::cout <<(*ptr).inch<<"Inches"<<'\n';
+std::cout <<(*ptr).inch<<"Inches\"<<'\n';
   return 0;
 }

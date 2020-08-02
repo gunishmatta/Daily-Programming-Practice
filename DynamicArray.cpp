@@ -19,7 +19,7 @@ cin>>n;
 loop(i,n)
 {
 cin>>n;
-    
+
 }
 for (auto x : v) {
 cout << x << "\n";
