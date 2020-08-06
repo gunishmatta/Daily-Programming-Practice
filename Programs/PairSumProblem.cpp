@@ -19,6 +19,8 @@ int  currentSum = a[i]+a[j];
   }
   else if (currentSum==key) {
   std::cout <<a[i]<<" and "<<a[j]<< '\n';
+  i++;
+  j--;
   }
 
 }
