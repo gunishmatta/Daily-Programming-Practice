@@ -1,6 +1,23 @@
 #include<iostream>
 using namespace std;
 
+void readline(char ch[], int max)
+{
+int i =0;
+char ch = cin.get();
+while (ch!='\0') {
+  a[i]==ch;
+  i++;
+  if (i==max-1) {
+    break;
+  }
+  ch = cin.get();
+
+}
+a[i]='\0';
+return;
+}
+
 int main() {
 char ch[100] ="Hello";
 char ch2[100] = {'w','o','r','l','d','\0'};

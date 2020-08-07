@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<iterator>
 #include<bits/stdc++.h>
 using namespace std;
 

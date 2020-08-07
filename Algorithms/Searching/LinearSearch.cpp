@@ -21,6 +21,7 @@ for (int j = 0; j<n; j++) {
   if (a[j]==n) {
     std::cout <<key<<" not found " << '\n';
   }
+
 }
 
 
