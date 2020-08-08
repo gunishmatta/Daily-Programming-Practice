@@ -4,7 +4,7 @@
 
 using namespace std;
 
-char mystrtok(char *str,char delimiter)
+char mystrtok(char *str,char *delimiter)
 {
 //string and single char that accepts a delimiter
 static char *input = NULL; //dynamic array to store inputs
