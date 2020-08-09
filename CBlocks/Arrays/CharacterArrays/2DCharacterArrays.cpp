@@ -25,6 +25,10 @@ std::cout <<a[i][j];
 std::cout<< '\n';
 }
 
+for (int i = 65; i < 92; i++) {
+std::cout <<char(i)<< '\n'; //print ascii 
+}
+
 
   return 0;
 }
