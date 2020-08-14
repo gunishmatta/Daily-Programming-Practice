@@ -10,7 +10,7 @@ for (int column = 0; column < 3; column++) {
 if (column%2==0) {
   for (int row = 0; row < 3; row++) {
 std::cout <<a[row][column]<<" ";
-  }
+}00
 }
   else
   {
