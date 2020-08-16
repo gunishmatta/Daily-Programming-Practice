@@ -1,37 +1,47 @@
 #include<iostream>
+#include<climits>
 using namespace std;
+int kadane (int a[], int n)
+{
+  int maxnegative=INT_MIN;
+  int currentSum =0;
+  int maxSum =0;
+  for (int i = 0; i < n; i++) {
 
+    currentSum += a[i];
+
+  if (currentSum<0) {
+currentSum=0;
+  }
+
+maxSum = max(currentSum,maxSum);
+  }
+  return maxSum;
+}
 int main() {
-int n,sum=0,currentMin=0,minsoFar=0,currentMax=0,maxsoFar=0;
-int a[10];
+		 int t;
+     cin>>t;
+     for (int i = 0; i < t; i++)
+     {
+int n,sum=0;
+int a[n];
 cin>>n;
 for (int i = 0; i < n; i++) {
   cin>>a[i];
 }
-//Corner case
-if (n==1) {
-  cout<<a[0];
-}
 
+int maxSumFromKadane = kadane(a,n);
 for (int j = 0; j < n; j++) {
   sum += a[j]; //sum of array
+a[j] = -a[j];
 }
-//we wil use Kadane's Algorithm. MaxSubaaray Sum = Total Sub Array sum - Minimum subarray sum
-for (int i = 0; i < n; i++) {
 
-currentMax = max(currentMax+a[i],a[i]);
-maxsoFar = max(currentMax,maxsoFar);
-
-currentMin = min(currentMin+a[i],a[i]);
-minsoFar = min(currentMin,minsoFar);
-
+// max sum with corner elements will be:
+    // array-sum - (-max subarray sum of inverted array)
+sum = sum + kadane(a,n);
+cout<<max(sum,maxSumFromKadane);
 
 }
-if (minsoFar==sum) {
-  cout<<maxsoFar;
-}
- cout<<max(maxsoFar,sum-minsoFar)<<endl;
-
 
   return 0;
 }
