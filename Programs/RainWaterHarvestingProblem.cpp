@@ -1,4 +1,5 @@
 #include<iostream>
+#include<climits>
 using namespace std;
 int main() {
 int a[1000];
@@ -10,8 +11,8 @@ int n;
   }
   int lo = 0; //pointer for traversal from left side
   int hi = n-1; //pointer for traversal from right side
-  int left_max =0;
-  int right_max=0;
+  int left_max =INT_MIN;
+  int right_max=INT_MIN;
   int water=0; //final answer
 
 while (lo<=hi) {
