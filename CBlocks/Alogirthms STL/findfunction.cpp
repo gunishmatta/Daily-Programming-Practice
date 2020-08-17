@@ -13,7 +13,7 @@ if (index==n) {
 std::cout << "Element is not present" << '\n';
 }
 else
-std::cout << "Element is present at"<<index<< '\n';
+std::cout << "Element is present at "<<index<< '\n';
 
   return 0;
 }
