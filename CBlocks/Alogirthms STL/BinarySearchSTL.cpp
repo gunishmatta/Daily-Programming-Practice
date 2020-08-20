@@ -18,7 +18,6 @@ std::cout << "Element is not present" << '\n';
 
 auto lb =  lower_bound(a,a+n,key);
 std::cout <<lb-a<< '\n';
-
 auto ub = upper_bound(a,a+n,key);
 std::cout <<ub-a<< '\n';
 
