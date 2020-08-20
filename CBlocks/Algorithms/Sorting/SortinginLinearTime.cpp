@@ -25,9 +25,10 @@ while(mid<=high)
 		mid++;
 	}
 	else
-
+  {
 	swap(a[mid],a[high]);
 		high--;
+}
 }
 
 for(int l=0;l<n;l++)
