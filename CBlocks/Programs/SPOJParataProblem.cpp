@@ -20,7 +20,15 @@ int upper_limit = (parathas*((2*maxRank)+(parathas-1)*maxRank))/2; //sum of term
 std::cout <<upper_limit<< '\n';
 int start = 0;
 int end = upper_limit;
-
+while (start<=end) {
+int mid = (start+end)/2;
+if (mid==upper_limit) {
+std::cout <<mid<< '\n';
+}
+else if (mid>) {
+  /* code */
+}
+}
   }
 
   return 0;
