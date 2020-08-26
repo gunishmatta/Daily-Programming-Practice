@@ -12,12 +12,22 @@ int mask = (1<<i);
 int ans =(n|mask);
 return ans;
 }
+
+int clearBit(int n,int i)
+{
+//  cout<<"1<< i = "<<(1<<i);
+  int mask = ~(1<<i);
+n = n&mask;
+  return n;
+}
+
 int main() {
   int n;
   cin>>n;
 int i;
 cin>>i;
-n =setbit(n,i);
+//n =setbit(n,i);
+std::cout <<clearBit(n,i)<< '\n';
 std::cout << "Answer is "<<n<< '\n';
   return 0;
 }
