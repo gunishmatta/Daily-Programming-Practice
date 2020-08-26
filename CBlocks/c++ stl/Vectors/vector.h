@@ -1,27 +1,28 @@
 #include<iostream>
 using namespace std;
+<template T>
 class Vector
 {
-int currentSize;
-int maxSize;
-int *a;
+T currentSize;
+T maxSize;
+T *a;
 public:
   Vector()
   {
     currentSize =0;
     maxSize =1;
-    a = new int[maxSize];
+    a = new T[maxSize];
   }
 
-void push_back(const int element)
+void push_back(const T element)
 {
   if(currentSize==maxSize)
   {
   //in case array is full
-  int *oldptr = a;
-a = new int[2*maxSize]; //size doubling operation
+  T *oldptr = a;
+a = new T[2*maxSize]; //size doubling operation
 maxSize = maxSize*2;
-for (int i = 0; i < currentSize; i++) {
+for (T i = 0; i < currentSize; i++) {
 
       a[i]= oldptr[i];
 }
@@ -30,23 +31,23 @@ delete []oldptr; //clear the memory
   a[currentSize]=element;
 currentSize++;
 }
-  int pop_back()
+  T pop_back()
   {
     return currentSize--;
   }
-  int front() const
+  T front() const
   {
     return a[0];
   }
-  int back() const
+  T back() const
   {
     return a[currentSize-1];
   }
-  int size() const
+  T size() const
   {
     return currentSize;
   }
-  int capacity() const
+  T capacity() const
   {
     return maxSize;
   }
@@ -54,11 +55,11 @@ currentSize++;
   {
     return currentSize==0;
   }
-  int at(const int i)
+  T at(const T i)
   {
     return a[i]; //return ith index
   }
-  int operator[] (const int i)
+  T operator[] (const T i)
   {
     return a[i];
   }
