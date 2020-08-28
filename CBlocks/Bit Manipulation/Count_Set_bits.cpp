@@ -15,7 +15,7 @@ int countbitsfaster(int n)
 {
   int ans =0;
   while (n>0) {
-n = n&(n-1);
+n = n&(n-1); //removes last set bit TC will be O(no of set bits)
 ans++;
   }
 return ans;
