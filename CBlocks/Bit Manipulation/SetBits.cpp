@@ -20,7 +20,11 @@ int clearBit(int n,int i)
 n = n&mask;
   return n;
 }
-
+int getbit(int n,int i)
+{
+int mask = i<<1;
+  return((n&mask)>0?1:0);
+}
 int main() {
   int n;
   cin>>n;
@@ -28,6 +32,6 @@ int i;
 cin>>i;
 //n =setbit(n,i);
 std::cout <<clearBit(n,i)<< '\n';
-std::cout << "Answer is "<<n<< '\n';
+//std::cout << "Answer is "<<n<< '\n';
   return 0;
 }

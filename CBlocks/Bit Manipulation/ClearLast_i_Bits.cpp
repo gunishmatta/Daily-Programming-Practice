@@ -23,7 +23,7 @@ int i;
 int j;
 cin>>i;
 cin>>j;
-//clear_lastn_bits(n,i);
+clear_lastn_bits(n,i);
 clear_itoj_bits(n,i,j);
 cout<<n<<endl;
 
