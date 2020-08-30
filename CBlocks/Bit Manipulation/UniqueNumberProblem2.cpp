@@ -20,7 +20,9 @@ while ((temp&1)!=1){
 pos++;
 temp= temp>>1;
 }
+//The first bit at xor is in position pos
 int mask = (1<<pos);
+//find those number which contain set bits at position pos
 int x=0;
 int y=0;
 for (int j = 0; j < n; j++) {
