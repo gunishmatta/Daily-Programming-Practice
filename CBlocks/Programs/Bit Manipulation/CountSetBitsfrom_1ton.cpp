@@ -1,10 +1,10 @@
 #include<iostream>
 using namespace std;
 int main() {
-	// int Q;
-	// cin>>Q;
-	// while(Q>0)
-	// {
+	int Q;
+	cin>>Q;
+	while(Q>0)
+	{
 int a;
 int b;
 int sum =0;
@@ -16,7 +16,7 @@ a++;
 }
 cout<<sum<<endl;
 
-
+}
 
 	return 0;
 }

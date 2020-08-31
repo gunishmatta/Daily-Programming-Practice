@@ -1,13 +1,13 @@
 //To find the unique number without using extra memory
 #include<iostream>
 using namespace std;
-
+#define long long int
 int main() {
 int result =0;
   int n;
   int no;
   cin>>n;
-int a[100]; //for input constraint
+int a[10000]; //for input constraint
 for(int i =0;i<n;i++)
 {
   cin>>no;
