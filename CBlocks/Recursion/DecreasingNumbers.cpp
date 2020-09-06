@@ -20,15 +20,17 @@ increase(n+1,limit);
   }
 
 }
+
 void inc(int n)
 {
 if(n==0)
 {
   return;
 }
-  inc(n-1);
+  inc(n-1); //it will do top to bottom approach
   std::cout <<n<< '\n';
 }
+
 int main(int argc, char const *argv[]) {
 int n;
 cin>>n;
