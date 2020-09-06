@@ -20,6 +20,15 @@ increase(n+1,limit);
   }
 
 }
+void inc(int n)
+{
+if(n==0)
+{
+  return;
+}
+  inc(n-1);
+  std::cout <<n<< '\n';
+}
 int main(int argc, char const *argv[]) {
 int n;
 cin>>n;
@@ -27,5 +36,6 @@ decrease(n);
 int limit;
 cin>>limit;
 increase(n,limit);
+inc(n);
   return 0;
 }
