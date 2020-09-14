@@ -7,7 +7,7 @@ int calc(int a,int n)
   }
   int smallans= calc(a,n/2);
   smallans*=smallans;
-  if (n&1) {
+  if (n&1) { // if n is odd then a^n = a*a^(n-1)
     return a*smallans;
   }
   else
