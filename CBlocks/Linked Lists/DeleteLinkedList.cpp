@@ -44,7 +44,26 @@ Node *temp = head->next;
 delete head;
 head = temp;
 }
+void DeleteTail(Node *&head)
+{
+  if(head==NULL)
+  {
+    return;
+  }
+  if(head->next==NULL)
+  {
+    delete head;
+    return;
+  }
+  Node *second_last = head;
+  while(second_last->next->next!=NULL)
+  {
+    second_last= second_last->next;
+  }
+  delete (second_last->next);
+  second_last->next = NULL;
 
+}
 int main() {
   Node *head = NULL;
   insertAtHead(head,3);
@@ -52,7 +71,7 @@ int main() {
   insertAtHead(head,1);
   printList(head);
 cout<<endl;
-  deleteHead(head);
+  DeleteTail(head);
   printList(head);
 
   return 0;
