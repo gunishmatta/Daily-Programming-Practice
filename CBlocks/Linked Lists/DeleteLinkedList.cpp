@@ -44,6 +44,17 @@ Node *temp = head->next;
 delete head;
 head = temp;
 }
+
+int length(Node *node)
+{
+  int count =0;
+  while(node!=NULL)
+  {
+    count++;
+    node = node->next;
+  }
+  return count;
+}
 void DeleteTail(Node *&head)
 {
   if(head==NULL)
@@ -64,6 +75,32 @@ void DeleteTail(Node *&head)
   second_last->next = NULL;
 
 }
+void deleteBetween(Node *&head, int pos)
+{
+
+    if (head==NULL or pos==0) {
+deleteHead(head);
+  return;
+    }
+    else  if(pos>length(head))
+    {
+      DeleteTail(head);
+    }
+    else
+    {
+      int jump =1;
+      Node *previous_node = head;
+      while(jump<=pos-1){
+        previous_node = previous_node->next;
+        jump++;
+      }
+      // Node temp->next is the node to be deleted
+    // Store pointer to the next of node to be deleted
+    Node *next =previous_node->next->next;
+    delete (previous_node->next);
+     previous_node->next = next;
+    }
+}
 int main() {
   Node *head = NULL;
   insertAtHead(head,3);
@@ -71,7 +108,7 @@ int main() {
   insertAtHead(head,1);
   printList(head);
 cout<<endl;
-  DeleteTail(head);
+deleteBetween(head,1);
   printList(head);
 
   return 0;
