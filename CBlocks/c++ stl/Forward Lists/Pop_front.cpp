@@ -9,7 +9,7 @@ for (auto f:f1) {
   cout<<f<<endl;
 }
 
-f1.pop_front();
+f1.pop_front(); //removes first element of list
 cout<<"After Push"<<endl;
 
 for (auto f:f1) {
