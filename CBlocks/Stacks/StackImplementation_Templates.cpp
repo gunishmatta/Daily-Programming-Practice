@@ -30,11 +30,21 @@ Stack<int> s;
 s.push(1);
 s.push(2);
 s.push(3);
-
+Stack<char> s2;
 while(!s.isEmpty())
 {
   cout<<s.top()<<" ";
   s.pop();
 }
+
+for (int i = 65; i < 85; i++) {
+s2.push(i);
+}
+while(!s2.isEmpty())
+{
+  cout<<s2.top()<<" ";
+  s2.pop();
+}
+
   return 0;
 }
