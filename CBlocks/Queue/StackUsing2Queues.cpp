@@ -46,7 +46,7 @@ return q1.front();
   }
   bool empty()
   {
-    return q1.empty();
+    return csize==0;
   }
 };
 int main() {
