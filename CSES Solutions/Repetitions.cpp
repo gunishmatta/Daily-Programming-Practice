@@ -8,7 +8,7 @@ int findLongest(string s)
   int ccount=1;
   for (int i = 0; i < len; i++) {
     if (i < len-1 && s[i] == s[i+1])
-               ccount++;
+             ccount++;
 
   else
   {

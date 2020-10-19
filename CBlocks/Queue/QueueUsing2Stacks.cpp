@@ -3,6 +3,10 @@
 using namespace std;
 class Queue{
 stack<int> s1,s2;
+int top()
+{
+
+}
   void enQueue(int x)
   {
   //move all elements from s1 to s2
@@ -33,9 +37,9 @@ void deQueue()
 };
 int main() {
 Queue q;
-q.enqueue(1);
-q.enqueue(2);
-q.enqueue(3);
+q.enQueue(1);
+q.enQueue(2);
+q.enQueue(3);
 
 cout<<q.top();
 
