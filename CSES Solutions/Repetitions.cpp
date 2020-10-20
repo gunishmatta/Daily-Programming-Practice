@@ -1,30 +1,32 @@
 #include<iostream>
+#include<cstring>
 using namespace std;
-int findLongest(string s)
+int findCount(string s)
 {
-  int len = s.length();
+  int n = s.length();
   int count =0;
-  char res = s[0];
-  int ccount=1;
-  for (int i = 0; i < len; i++) {
-    if (i < len-1 && s[i] == s[i+1])
-             ccount++;
-
+  int currentCount =1;
+  for (int i = 0; i < n; i++) {
+  if(i<n && s[i]==s[i+1])
+  {
+    currentCount++;
+  }
   else
   {
-    if(ccount>count)
+    if(currentCount>count)
     {
-      count = ccount;
-      res = s[i];
+      count = currentCount;
     }
-    ccount =1;
+    currentCount =1;
   }
+
   }
-  return res;
+  return count;
 }
 int main() {
-string s;
-cin>>s;
-cout<<findLongest(s);
+  string s;
+  cin>>s;
+  int count = findCount(s);
+  cout<<count;
   return 0;
 }
