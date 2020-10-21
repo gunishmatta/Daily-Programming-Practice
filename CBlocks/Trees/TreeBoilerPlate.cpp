@@ -30,6 +30,6 @@ node*  root = new node(d);
 
 int main() {
 node* t = buildTree();
-printTree(t);
+
   return 0;
 }
