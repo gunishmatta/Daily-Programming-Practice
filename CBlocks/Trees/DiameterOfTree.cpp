@@ -97,7 +97,7 @@ int rightHeight = height(root->right);
 int ldiameter = diameter(root->left);
 
 int rdiameter = diameter(root->right);
-return(max(leftHeight,rightHeight+1,max(ldiamtere,rdiameter)));
+return(max(leftHeight,rightHeight,max(ldiamtere,rdiameter)));
 
 }
 int main() {
