@@ -86,22 +86,49 @@ int height(node* root)
   int right = height(root->left);
     return max(left,right)+1;
 }
-int diameter(node* root)
+
+class HBPair
 {
-  if(root==NULL)
+public:
+  int height;
+  bool balanced;
+
+};
+HBPair checkBalanced(node* root)
+{
+  HBPair p;
+  if(root ==NULL)
   {
-    return 0;
+    p.height =0;
+    p.balanced = true;
+    return p;
   }
-int leftHeight = height(root->left);
-int rightHeight = height(root->right);
-int ldiameter = diameter(root->left);
+  HBPair left = checkBalanced(root->left);
+  HBPair right = checkBalanced(root->right);
 
-int rdiameter = diameter(root->right);
-return(max(leftHeight,rightHeight,max(ldiamtere,rdiameter)));
+  p.height = max(left.height,right.height)+1;
 
+  if((abs(left.height-right.height)<=1) && left.balanced && right.balanced)
+  {
+    p.balanced = true;
+  }
+  else
+  {
+    p.balanced = false;
+  }
+  return p;
 }
 int main() {
 node* root = buildTree();
-cout<<countNodes(root);
+//cout<<countNodes(root);
+if(checkBalanced(root).balanced)
+{
+  cout<<"balanced";
+
+}
+else
+{
+  cout<<"NOt balanced";
+}
   return 0;
 }
