@@ -47,6 +47,7 @@ Node* middle(Node *head)
   if (head==NULL or head->next ==NULL) {
     return head;
     }
+    
   Node *slow=head;
   Node *fast=head->next;
   while(fast!=NULL and fast->next!=NULL)

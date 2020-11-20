@@ -7,6 +7,7 @@ private:
 public:
   void push(int data)
   {
+    
     v.push_back(data);
   }
   void pop()
