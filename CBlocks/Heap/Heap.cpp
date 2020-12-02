@@ -17,7 +17,7 @@ bool compare(int a, int b)
 }
 
 }
-void heapify(int index)
+void heapify(vector<int> &v,int index)
 {
 	int left = 2*index;
 	int right = 2*index+1;
@@ -38,7 +38,7 @@ void heapify(int index)
 if(min_index!=index)
 {
 	swap(v[min_index],v[index]);
-	heapify(min_index);
+	heapify(v,min_index);
 }
 
 }
@@ -77,7 +77,7 @@ void pop()
 	int last = v.size()-1;
 	swap(v[1],v[last]);
 	v.pop_back();
-	heapify(1);
+	heapify(v,1);
 }
 
 bool isEmpty()
@@ -88,7 +88,14 @@ bool isEmpty()
 	
 };
 
-
+void buildHeap(std::vector<int> &v)
+{
+	int idx = (v.size()-1)/2;
+	for(int i=idx;i>=1;i--)
+	{
+		heapify(v,i);
+	}
+}
 
 
 
@@ -106,6 +113,7 @@ int no;
 cin>>no;
 h.push(no);
 }
+
 
 while(!h.isEmpty())
 {
