@@ -1,5 +1,5 @@
-#include<iostream>
-#include<list>
+#include <iostream>
+#include <list>
 using namespace std;
 class Graph
 {
@@ -8,33 +8,31 @@ private:
     list<int> *l;
 
 public:
-    Graph(int V )
+    Graph(int V)
     {
         this->V = V;
         l = new list<int>[V];
     }
 
-void addEdge(int x,int y)
-{
-    l[x].push_back(y);
-    l[y].push_back(x);
-}
-
-void printGraph()
-{
-    for (int i = 0; i < V; i++)
+    void addEdge(int x, int y)
     {
-        cout << "Vertex ->" << i << endl;
-        for (int nbr:l[i])
-        {
-            cout << nbr << " ";
-        }
-        cout << endl;
+        l[x].push_back(y);
+        l[y].push_back(x);
     }
-}
 
+    void printGraph()
+    {
+        for (int i = 0; i < V; i++)
+        {
+            cout << "Vertex ->" << i << endl;
+            for (int nbr : l[i])
+            {
+                cout << nbr << " ";
+            }
+            cout << endl;
+        }
+    }
 };
-
 
 int main()
 {
@@ -45,5 +43,4 @@ int main()
     g.addEdge(1, 2);
 
     g.printGraph();
-
 }
