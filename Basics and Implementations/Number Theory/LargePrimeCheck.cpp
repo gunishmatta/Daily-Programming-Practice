@@ -36,11 +36,11 @@ bool IsPrime(long long No)
 }
 int main() {
   find_seive();
-  if((checkPrime(2020111))
-  {
-    cout<<"it is prime";
-  }
-  else
-  std::cout << "Its not" << '\n';
-  return 0;
+  // if((checkPrime(2020111))
+  // {
+  //   cout<<"it is prime";
+  // }
+  // else
+  // std::cout << "Its not" << '\n';
+  // return 0;
 }
